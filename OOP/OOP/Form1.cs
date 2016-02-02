@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace OOP
 {
-    public partial class Form1 : Form
+    public partial class frmDaq : Form
     {
-        public Form1()
+        public frmDaq()
         {
             InitializeComponent();
         }
+
     }
 }
