@@ -34,14 +34,14 @@
             this.operationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpSampling = new System.Windows.Forms.GroupBox();
+            this.btnSampling = new System.Windows.Forms.Button();
             this.lblSampling = new System.Windows.Forms.Label();
             this.grpLogging = new System.Windows.Forms.GroupBox();
+            this.btnLogging = new System.Windows.Forms.Button();
             this.lblLogging = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSensors = new System.Windows.Forms.TextBox();
             this.grpSensor = new System.Windows.Forms.GroupBox();
-            this.btnSampling = new System.Windows.Forms.Button();
-            this.btnLogging = new System.Windows.Forms.Button();
             this.mnuStrip.SuspendLayout();
             this.grpSampling.SuspendLayout();
             this.grpLogging.SuspendLayout();
@@ -99,6 +99,15 @@
             this.grpSampling.TabStop = false;
             this.grpSampling.Text = "Sampling";
             // 
+            // btnSampling
+            // 
+            this.btnSampling.Location = new System.Drawing.Point(26, 69);
+            this.btnSampling.Name = "btnSampling";
+            this.btnSampling.Size = new System.Drawing.Size(81, 29);
+            this.btnSampling.TabIndex = 2;
+            this.btnSampling.Text = "Sampling";
+            btnSampling.UseVisualStyleBackColor = true;
+            // 
             // lblSampling
             // 
             this.lblSampling.AutoSize = true;
@@ -120,6 +129,15 @@
             this.grpLogging.TabStop = false;
             this.grpLogging.Text = "Logging";
             // 
+            // btnLogging
+            // 
+            this.btnLogging.Location = new System.Drawing.Point(26, 67);
+            this.btnLogging.Name = "btnLogging";
+            this.btnLogging.Size = new System.Drawing.Size(113, 31);
+            this.btnLogging.TabIndex = 2;
+            this.btnLogging.Text = "Logging on file";
+            this.btnLogging.UseVisualStyleBackColor = true;
+            // 
             // lblLogging
             // 
             this.lblLogging.AutoSize = true;
@@ -137,42 +155,24 @@
             this.textBox1.Size = new System.Drawing.Size(153, 22);
             this.textBox1.TabIndex = 0;
             // 
-            // textBox2
+            // txtSensors
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox2.Location = new System.Drawing.Point(11, 16);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 208);
-            this.textBox2.TabIndex = 4;
+            this.txtSensors.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtSensors.Location = new System.Drawing.Point(11, 16);
+            this.txtSensors.Multiline = true;
+            this.txtSensors.Name = "txtSensors";
+            this.txtSensors.Size = new System.Drawing.Size(132, 208);
+            this.txtSensors.TabIndex = 4;
             // 
             // grpSensor
             // 
-            this.grpSensor.Controls.Add(this.textBox2);
+            this.grpSensor.Controls.Add(this.txtSensors);
             this.grpSensor.Location = new System.Drawing.Point(347, 51);
             this.grpSensor.Name = "grpSensor";
             this.grpSensor.Size = new System.Drawing.Size(153, 230);
             this.grpSensor.TabIndex = 5;
             this.grpSensor.TabStop = false;
             this.grpSensor.Text = "Sensor Values";
-            // 
-            // btnSampling
-            // 
-            this.btnSampling.Location = new System.Drawing.Point(26, 69);
-            this.btnSampling.Name = "btnSampling";
-            this.btnSampling.Size = new System.Drawing.Size(81, 29);
-            this.btnSampling.TabIndex = 2;
-            this.btnSampling.Text = "Sampling";
-            this.btnSampling.UseVisualStyleBackColor = true;
-            // 
-            // btnLogging
-            // 
-            this.btnLogging.Location = new System.Drawing.Point(26, 67);
-            this.btnLogging.Name = "btnLogging";
-            this.btnLogging.Size = new System.Drawing.Size(113, 31);
-            this.btnLogging.TabIndex = 2;
-            this.btnLogging.Text = "Logging on file";
-            this.btnLogging.UseVisualStyleBackColor = true;
             // 
             // frmDaq
             // 
@@ -214,7 +214,7 @@
         private System.Windows.Forms.Label lblLogging;
         private System.Windows.Forms.Button btnSampling;
         private System.Windows.Forms.Button btnLogging;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSensors;
         private System.Windows.Forms.GroupBox grpSensor;
     }
 }

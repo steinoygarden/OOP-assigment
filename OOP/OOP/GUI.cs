@@ -12,10 +12,13 @@ namespace OOP
 {
     public partial class frmDaq : Form
     {
+        private double time;
+
         public frmDaq()
         {
             InitializeComponent();
         }
-
-    }
+    
+     }
 }
+

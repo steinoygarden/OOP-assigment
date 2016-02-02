@@ -1,1 +1,9 @@
 C:\Users\stein\OneDrive\Documents\GitHub\OOP-assigment\OOP\OOP\bin\Debug\OOP.exe.config
+C:\Users\stein\OneDrive\Documents\GitHub\OOP-assigment\OOP\OOP\bin\Debug\OOP.exe
+C:\Users\stein\OneDrive\Documents\GitHub\OOP-assigment\OOP\OOP\bin\Debug\OOP.pdb
+C:\Users\stein\OneDrive\Documents\GitHub\OOP-assigment\OOP\OOP\obj\Debug\OOP.csprojResolveAssemblyReference.cache
+C:\Users\stein\OneDrive\Documents\GitHub\OOP-assigment\OOP\OOP\obj\Debug\OOP.frmDaq.resources
+C:\Users\stein\OneDrive\Documents\GitHub\OOP-assigment\OOP\OOP\obj\Debug\OOP.Properties.Resources.resources
+C:\Users\stein\OneDrive\Documents\GitHub\OOP-assigment\OOP\OOP\obj\Debug\OOP.csproj.GenerateResource.Cache
+C:\Users\stein\OneDrive\Documents\GitHub\OOP-assigment\OOP\OOP\obj\Debug\OOP.exe
+C:\Users\stein\OneDrive\Documents\GitHub\OOP-assigment\OOP\OOP\obj\Debug\OOP.pdb
