@@ -12,13 +12,22 @@ namespace OOP
 {
     public partial class frmDaq : Form
     {
-        private double time;
 
         public frmDaq()
         {
             InitializeComponent();
+
         }
-    
-     }
+
+        private void btnSampling_Click(object sender, EventArgs e)
+        {
+            string s = Program.value();
+            txtSensors.Text = s;
+            tmrSampling.Start();
+            btnSampling.Enabled = tmrSampling < 5000;
+        }
+    }
 }
+
+
 

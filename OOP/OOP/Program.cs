@@ -11,24 +11,38 @@ namespace OOP
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        
-        [STAThread]
-        static void Main()
+        private static string sTxt;
+        private static Sensor[] sObj;
+
+
+      [STAThread]
+        static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDaq());
+
             int counter, maxSid = 9;
-            string sTxt;
-            Sensor[] sObj = new Sensor[maxSid];
-            for (counter = 0;counter<maxSid;counter++)
+            sTxt = null;
+
+            sObj = new Sensor[maxSid];
+            for (counter = 0; counter < maxSid; counter++)
             {
                 sObj[counter] = new Sensor(counter);
             }
-            for (counter = 0; counter<maxSid;counter ++)
+
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new frmDaq());
+            
+          }
+        public static string value()
+        {
+            sTxt = null;
+            for (int i = 0; i < 9; i++)
             {
-                sTxt = sObj[counter].GetValue().ToString("F3");
+                sTxt += sObj[i].GetValue().ToString("F3") + "\r\n";
             }
+            return sTxt;
         }
+
     }
 }

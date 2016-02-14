@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtSampling = new System.Windows.Forms.TextBox();
             this.mnuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +43,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtSensors = new System.Windows.Forms.TextBox();
             this.grpSensor = new System.Windows.Forms.GroupBox();
+            this.tmrSampling = new System.Windows.Forms.Timer(this.components);
             this.mnuStrip.SuspendLayout();
             this.grpSampling.SuspendLayout();
             this.grpLogging.SuspendLayout();
@@ -106,7 +108,8 @@
             this.btnSampling.Size = new System.Drawing.Size(81, 29);
             this.btnSampling.TabIndex = 2;
             this.btnSampling.Text = "Sampling";
-            btnSampling.UseVisualStyleBackColor = true;
+            this.btnSampling.UseVisualStyleBackColor = true;
+            this.btnSampling.Click += new System.EventHandler(this.btnSampling_Click);
             // 
             // lblSampling
             // 
@@ -216,6 +219,7 @@
         private System.Windows.Forms.Button btnLogging;
         private System.Windows.Forms.TextBox txtSensors;
         private System.Windows.Forms.GroupBox grpSensor;
+        private System.Windows.Forms.Timer tmrSampling;
     }
 }
 

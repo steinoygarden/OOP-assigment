@@ -11,6 +11,7 @@ namespace OOP
         double dVal;
         int sId;
         Random rSenVal;
+        int sRange = 5;
 
         public Sensor(int id)
         {
@@ -20,7 +21,7 @@ namespace OOP
         }
         public double GetValue()
         {
-            dVal += rSenVal.NextDouble();
+            dVal = rSenVal.NextDouble()*sRange;
             return dVal;
         }
         public int GetSenId()
