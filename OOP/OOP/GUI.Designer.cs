@@ -39,9 +39,13 @@
             this.grpLogging = new System.Windows.Forms.GroupBox();
             this.btnLogging = new System.Windows.Forms.Button();
             this.lblLogging = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLogging = new System.Windows.Forms.TextBox();
             this.txtSensors = new System.Windows.Forms.TextBox();
             this.grpSensor = new System.Windows.Forms.GroupBox();
+            this.lblFileName = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblNumbLog = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.mnuStrip.SuspendLayout();
             this.grpSampling.SuspendLayout();
             this.grpLogging.SuspendLayout();
@@ -65,7 +69,7 @@
             this.helpToolStripMenuItem});
             this.mnuStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuStrip.Name = "mnuStrip";
-            this.mnuStrip.Size = new System.Drawing.Size(545, 28);
+            this.mnuStrip.Size = new System.Drawing.Size(668, 28);
             this.mnuStrip.TabIndex = 1;
             this.mnuStrip.Text = "menuStrip1";
             // 
@@ -86,6 +90,7 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // grpSampling
             // 
@@ -122,7 +127,7 @@
             // 
             this.grpLogging.Controls.Add(this.btnLogging);
             this.grpLogging.Controls.Add(this.lblLogging);
-            this.grpLogging.Controls.Add(this.textBox1);
+            this.grpLogging.Controls.Add(this.txtLogging);
             this.grpLogging.Location = new System.Drawing.Point(12, 177);
             this.grpLogging.Name = "grpLogging";
             this.grpLogging.Size = new System.Drawing.Size(309, 104);
@@ -138,6 +143,7 @@
             this.btnLogging.TabIndex = 2;
             this.btnLogging.Text = "Logging on file";
             this.btnLogging.UseVisualStyleBackColor = true;
+            this.btnLogging.Click += new System.EventHandler(this.btnLogging_Click);
             // 
             // lblLogging
             // 
@@ -148,21 +154,21 @@
             this.lblLogging.TabIndex = 1;
             this.lblLogging.Text = "Next Logging Time ";
             // 
-            // textBox1
+            // txtLogging
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.Location = new System.Drawing.Point(143, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 22);
-            this.textBox1.TabIndex = 0;
+            this.txtLogging.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtLogging.Location = new System.Drawing.Point(143, 32);
+            this.txtLogging.Name = "txtLogging";
+            this.txtLogging.Size = new System.Drawing.Size(166, 22);
+            this.txtLogging.TabIndex = 0;
             // 
             // txtSensors
             // 
             this.txtSensors.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtSensors.Location = new System.Drawing.Point(11, 16);
+            this.txtSensors.Location = new System.Drawing.Point(6, 16);
             this.txtSensors.Multiline = true;
             this.txtSensors.Name = "txtSensors";
-            this.txtSensors.Size = new System.Drawing.Size(132, 208);
+            this.txtSensors.Size = new System.Drawing.Size(278, 208);
             this.txtSensors.TabIndex = 4;
             // 
             // grpSensor
@@ -170,16 +176,56 @@
             this.grpSensor.Controls.Add(this.txtSensors);
             this.grpSensor.Location = new System.Drawing.Point(347, 51);
             this.grpSensor.Name = "grpSensor";
-            this.grpSensor.Size = new System.Drawing.Size(153, 230);
+            this.grpSensor.Size = new System.Drawing.Size(290, 230);
             this.grpSensor.TabIndex = 5;
             this.grpSensor.TabStop = false;
             this.grpSensor.Text = "Sensor Values";
+            // 
+            // lblFileName
+            // 
+            this.lblFileName.AutoSize = true;
+            this.lblFileName.Location = new System.Drawing.Point(72, 291);
+            this.lblFileName.Name = "lblFileName";
+            this.lblFileName.Size = new System.Drawing.Size(46, 17);
+            this.lblFileName.TabIndex = 6;
+            this.lblFileName.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(291, 291);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(142, 17);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Nummbers of logging";
+            // 
+            // lblNumbLog
+            // 
+            this.lblNumbLog.AutoSize = true;
+            this.lblNumbLog.Location = new System.Drawing.Point(444, 291);
+            this.lblNumbLog.Name = "lblNumbLog";
+            this.lblNumbLog.Size = new System.Drawing.Size(46, 17);
+            this.lblNumbLog.TabIndex = 8;
+            this.lblNumbLog.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 291);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 17);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "File:";
             // 
             // frmDaq
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 320);
+            this.ClientSize = new System.Drawing.Size(668, 320);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblNumbLog);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblFileName);
             this.Controls.Add(this.grpSensor);
             this.Controls.Add(this.grpLogging);
             this.Controls.Add(this.grpSampling);
@@ -210,13 +256,17 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.GroupBox grpSampling;
         private System.Windows.Forms.GroupBox grpLogging;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLogging;
         private System.Windows.Forms.Label lblSampling;
         private System.Windows.Forms.Label lblLogging;
         private System.Windows.Forms.Button btnSampling;
         private System.Windows.Forms.Button btnLogging;
         private System.Windows.Forms.TextBox txtSensors;
         private System.Windows.Forms.GroupBox grpSensor;
+        private System.Windows.Forms.Label lblFileName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNumbLog;
+        private System.Windows.Forms.Label label4;
     }
 }
 

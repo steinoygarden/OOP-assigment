@@ -37,9 +37,15 @@ namespace OOP
         public static string value()
         {
             sTxt = null;
-            for (int i = 0; i < 9; i++)
+            string TimeStamp = DateTime.Now.ToString("HH:mm:ss",new System.Globalization.CultureInfo("en-GB"));
+
+            for (int i = 0; i < 3; i++)
             {
-                sTxt += sObj[i].GetValue().ToString("F3") + "\r\n";
+                sTxt += "A: "+sObj[i].GetSenId().ToString() + "\t"+ sObj[i].GetValue(false).ToString("F3") +"\t"+TimeStamp+ "\r\n";
+            }
+            for (int j = 3; j<4;j++)
+            {
+                sTxt +="D: "+sObj[j].GetSenId().ToString()+"\t"+ sObj[j].GetValue(true).ToString("F3") + "\t" + TimeStamp + "\r\n";
             }
             return sTxt;
         }

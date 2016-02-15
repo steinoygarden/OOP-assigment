@@ -19,9 +19,17 @@ namespace OOP
             rSenVal = new Random(id);
             dVal = 0.0F;
         }
-        public double GetValue()
-        {
-            dVal = rSenVal.NextDouble()*sRange;
+        
+        public double GetValue(bool digital)
+        {if (digital == true)
+            {
+                dVal = rSenVal.Next(0, 2);
+            }
+        else
+            {
+                dVal = (rSenVal.Next(0, 4096) / 4096.0) * sRange;
+            }
+            
             return dVal;
         }
         public int GetSenId()
